@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+$is-pink: hsl(0, 100%, 71%);
+
+@import "../node_modules/bulma/bulma";
+
+$family-sans-serif: "Ubuntu";
+$family-primary: $family-sans-serif;
+
+a:hover,
+a.navbar-item:hover {
+  color: hsl(146, 32.5%, 68%);
+}
+
+.footer {
+  background-color: hsla(0, 0%, 98%, 0);
+  padding: 2rem 1.5rem 2rem;
+}
+
+//Blinker at the end in nav header text
+.text::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  display: inline-block;
+  background-color: #8b8b8b;
+  vertical-align: top;
+  width: 10px;
+  height: 24px;
+  -webkit-animation: blink 1s step-end infinite;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// Animate footer quote
+.animate-charcter {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    200deg,
+    #231557 0%,
+    #44107a 30%,
+    #ff1361 69%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 10s linear infinite;
+  //   display: inline-block;
+  //   font-size: 190px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
