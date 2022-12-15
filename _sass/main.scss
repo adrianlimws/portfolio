@@ -1,11 +1,15 @@
 @charset "utf-8";
 
+$family-sans-serif: "Poppins", san-serif;
+$family-primary: $family-sans-serif;
+
 $is-pink: hsl(0, 100%, 71%);
 
 @import "../node_modules/bulma/bulma";
 
-$family-sans-serif: "Ubuntu";
-$family-primary: $family-sans-serif;
+.navbar {
+  margin-top: 1rem;
+}
 
 a:hover,
 a.navbar-item:hover {
